@@ -62,6 +62,19 @@ services:
         networks:
             - laravel
 
+    # phpmyadmin
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        restart: unless-stopped
+        environment:
+            PMA_HOST: db
+            PMA_USER: ${DB_USERNAME:-username}
+            PMA_PASSWORD: ${DB_PASSWORD:-userpass}
+        ports:
+            - "8080:80"
+        networks:
+            - laravel
+
 networks:
     laravel:
         driver: bridge
