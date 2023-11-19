@@ -3,20 +3,23 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+
+Route::get('/admin', function () {
+    return view('admin.principal');
+})->middleware('checkUserClass:admin');
+
+Route::get('/operacional', function () {
+    return view('operacional.principal');
+})->middleware('checkUserClass:operacional');
+
+Route::get('/comercial', function () {
+    return view('comercial.principal');
+})->middleware('checkUserClass:comercial');
 
 Route::get('/', function () {
     return view('welcome');
 });
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
