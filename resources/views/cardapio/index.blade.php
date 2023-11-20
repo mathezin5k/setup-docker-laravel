@@ -14,4 +14,5 @@
         </li>
     @endforeach
     </ul>
+    <a href="{{route ('cardapio.create')}}">Criar</a>
     
