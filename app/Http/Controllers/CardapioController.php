@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cardapio;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 class CardapioController extends Controller
 {
     public function __construct()
