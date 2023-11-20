@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CardapioController;
 
 Route::get('/admin', function () {
     return view('admin.principal');
@@ -19,6 +19,8 @@ Route::get('/comercial', function () {
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('cardapio', CardapioController::class);
 
 
 Route::get('/dashboard', function () {
