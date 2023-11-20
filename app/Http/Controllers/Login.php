@@ -8,7 +8,7 @@ class Login extends Controller
 {
     public function login()
     {
-        return view('site.principal');
+        return view('welcome');
     }
 
     public function outroMetodo(Request $request)
