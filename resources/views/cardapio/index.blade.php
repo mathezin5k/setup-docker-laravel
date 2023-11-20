@@ -4,7 +4,7 @@
             <h2>{{ $cardapio->nome }}</h2>
             <p>{{ $cardapio->descricao }}</p>
             <p>{{ $cardapio->preco }}</p>
-            <img src="{{ asset('storage/' . $cardapio->imagem) }}" alt="{{ $cardapio->nome }}">
+            <img src="{{ asset('storage/imagens/' . $cardapio->imagem) }}" alt="{{ $cardapio->nome }}">
             <a href="/cardapio/{{ $cardapio->id }}/edit">Editar</a>
             <form action="/cardapio/{{ $cardapio->id }}" method="post">
                 @csrf

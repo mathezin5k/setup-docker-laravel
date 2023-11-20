@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CardapioController;
+use App\Http\Controllers\AvailabilityController;
 
 Route::get('/admin', function () {
     return view('admin.principal');
@@ -21,6 +22,8 @@ Route::get('/', function () {
 });
 
 Route::resource('cardapio', CardapioController::class);
+
+Route::resource('availability', AvailabilityController::class);
 
 
 Route::get('/dashboard', function () {
