@@ -14,7 +14,7 @@ class ReservaController extends Controller
         $cardapios = Cardapio::all();
         $availabilities = Availability::all();
 
-        return view('reserva.create', compact('cardapios', 'availabilities'));
+        return view('reservas.create', compact('cardapios', 'availabilities'));
     }
 
     public function store(Request $request)
