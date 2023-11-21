@@ -122,7 +122,7 @@ input[type="submit"] {
         </a>
         <nav class="navbar">
             <a href="#">menu</a>
-            <a href="">reserva</a>
+            <a href="{{ url('reservas')}}">reserva</a>
             <a href="{{ url('availability')}}">agenda</a>
         </nav>
 

@@ -120,7 +120,7 @@ button:hover {
     </a>
     <nav class="navbar">
         <a href="{{ url('cardapio')}}">menu</a>
-        <a href="">reserva</a>
+        <a href="{{ url('reservas')}}">reserva</a>
         <a href='#'>agenda</a>
     </nav>
 </header>
