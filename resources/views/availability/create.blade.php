@@ -3,7 +3,7 @@
     @csrf
     <p>
         <label for="day">Dia:</label>
-        <input type="text" id="day" name="day">
+        <input type="date" id="day" name="day">
     </p>
     <p>
         <label for="start_time">Hora de Início:</label>

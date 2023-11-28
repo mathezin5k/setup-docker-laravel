@@ -115,7 +115,7 @@
                 <div class="logo">Zé Mania<span>.</span></div>
                 <nav class="navbar">
                     <a href="{{ route('cardapio.index') }}">menu</a>
-                    <a href="#">reserva</a>
+                    <a href="{{ route('reservas.index')}}">reserva</a>
                     <a href="{{ route('availability.index') }}">agenda</a>
                 </nav>
                 <div class="icons">
