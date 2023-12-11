@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CardapioController;
 use App\Http\Controllers\AvailabilityController;
-use App\Http\Controllers\ReservaController;
+use App\Http\Controllers\ReservationController;
 
 Route::get('/admin', function () {
     return view('admin.principal');
@@ -26,6 +26,9 @@ Route::resource('cardapio', CardapioController::class);
 
 Route::resource('availability', AvailabilityController::class);
 
+Route::post('reservas/{reservation}/changeStatus', [ReservationController::class, 'changeStatus'])->name('reservas.changeStatus');
+Route::resource('reservas', ReservationController::class)->except(['update']);
+Route::put('reservas/{reserva}', [ReservationController::class, 'update'])->name('reservas.update');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
