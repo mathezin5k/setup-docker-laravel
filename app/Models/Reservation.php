@@ -20,7 +20,7 @@ class Reservation extends Model
     ];
 
     protected $attributes = [
-        'status' => 'Pendente', // Defina 'Pendente' como padrão
+        'status' => '0', // Defina 'Pendente' como padrão
     ];
 
     public function cardapio()
